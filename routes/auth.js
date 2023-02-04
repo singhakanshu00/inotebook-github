@@ -12,6 +12,7 @@ const JWT_TOKEN = process.env.JWT_TOKEN;
 //Route 1: 
 router.post('/createuser',
     [
+        // This is new comment
         body('email', 'enter a valid email').isEmail(),
         body('name', 'name should be minimum of 3 letters').isLength({ min: 3 }),
         body('password', 'password should be atleast 5 characters').isLength({ min: 5 }),
